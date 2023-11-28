@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("images/header-image.png");
+  background-size: cover;
+  background-position: center;
+  padding: 10px 8%;
+  position: relative;
+}
+
+/* navbar styling */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+/* logo styles */
+.logo {
+  width: 150px;
+  cursor: pointer;
+}
+
+/* button styling */
+nav button {
+  border: 0;
+  outline: 0;
+  background: #db0001;
+  color: #fff;
+  padding: 7px 20px;
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+/* language button styling */
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid white;
+  padding: 7px 10px;
+}
+
+.lang-btn img {
+  width: 10px;
+  margin-left: 10px;
+}
+
+/* header design */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.content h1 {
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: 600;
+  max-width: 650px;
+}
+
+.content h3 {
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.email-signup {
+  background: #fff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.email-signup input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  margin-left: 20px;
+}
+
+.email-signup button {
+  border: 0;
+  outline: 0;
+  background: #db0001;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 30px;
+}
+
+.features {
+  padding: 50px 12%;
+  font-size: 22px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 50px 0px;
+  width: 100%;
+}
+
+.text-col {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.img-col {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+
+.img-col img {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+
+.features h2 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.fag {
+  padding: 10px 12%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.fag h2 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.accordion {
+  margin: 60px auto;
+  width: 100%;
+  max-width: 750px;
+}
+
+.accordion li {
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+.accordion li label {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  position: relative;
+  background: #333;
+}
+
+label::after {
+  content: "+";
+  font-size: 34px;
+  color: white;
+  right: 20px;
+  position: absolute;
+  font-weight: 600;
+}
+
+.accordion input[type="radio"] {
+  display: none;
+}
+
+.accordion .text {
+  background: #000;
+  overflow: hidden;
+  text-align: left;
+  max-height: 0;
+  padding: 0 20px;
+  transition: 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .text {
+  max-height: 600px;
+  padding: 30px 20px;
+}
+
+.accordion input[type="radio"]:checked + label::after {
+  content: "-";
+  font-size: 34px;
+  color: white;
+  right: 20px;
+  position: absolute;
+  font-weight: 600;
+}
+
+.fag .email-signup {
+  max-width: 600px;
+  margin: 20px auto 60px;
+}
+
+.fag .email-signup small {
+  font-size: 12px;
+}
+
+.footer {
+  padding: 50px 15% 10px;
+  border-top: 6px solid #333;
+  color: #777;
+}
+
+.footer h3 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.footer h3 a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer .col {
+  flex-basis: 25%;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+.footer .col a {
+  display: block;
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.footer .row {
+  align-items: flex-start;
+  padding: 10px 0;
+}
+
+.footer .lang-btn{
+    color: white;
+}
+
+/* media queriries for smaller screen sizes */
+
+@media only screen and (max-width:600px) {
+    .logo{
+        width: 100px;
+
+    }
+
+    nav button{
+        padding: 5px 10px;
+    }
+
+    .lang-btn{
+        padding: 4px 8px;
+    }
+
+    .content{
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+
+    }
+
+    .content h1{
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .email-signup button{
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .text-col{
+        flex-direction: column;
+
+    }
+    .img-col{
+        flex-direction: column;
+
+    }
+
+    .features h2{
+        font-size: 30px;
+
+    }
+
+    .features p{
+        font-size: 15px;
+    }
+
+    .row:nth-child(2), .row:nth-child(4),row:nth-child(1), .row:nth-child(3){
+        flex-direction: column-reverse;
+    }
+
+    .row:nth-child(1){
+        flex-direction: column-reverse;
+    }
+
+    .features .row{
+        padding: 10px 0;
+    }
+
+}
